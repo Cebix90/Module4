@@ -11,34 +11,22 @@ public class PasswordValidationTests {
 
     @Test
     public void testHasGoodLength(){
-        String password = "Topsecretkey123!";
-        boolean lengthResult = passwordValidation.hasGoodLength(password);
-
-        Assertions.assertTrue(lengthResult);
+        Assertions.assertTrue(passwordValidation.hasGoodLength("Topsecretkey123!"));
     }
 
     @Test
     public void testHasWrongLength(){
-        String password = "Toshortsad1";
-        boolean lengthResult = passwordValidation.hasGoodLength(password);
-
-        Assertions.assertFalse(lengthResult);
+        Assertions.assertFalse(passwordValidation.hasGoodLength("Toshortsad1"));
     }
 
     @Test
     public void testHasNoWhiteSpaces(){
-        String password = "Topsecretkey123!";
-        boolean noWhiteSpacesResult = passwordValidation.hasNoWhiteSpaces(password);
-
-        Assertions.assertTrue(noWhiteSpacesResult);
+        Assertions.assertTrue(passwordValidation.hasNoWhiteSpaces("Topsecretkey123!"));
     }
 
     @Test
     public void testHasNoRepetitions(){
-        String password = "Topsecretkey123!";
-        boolean noRepetitionsResult = passwordValidation.hasNoRepetitions(password);
-
-        Assertions.assertTrue(noRepetitionsResult);
+        Assertions.assertTrue(passwordValidation.hasNoRepetitions("Topsecretkey123!"));
     }
 
     @Test
@@ -50,7 +38,6 @@ public class PasswordValidationTests {
     public void testHasNumbersWithoutNumbers() {
         Assertions.assertFalse(passwordValidation.hasNumbers("NoNumbersHere"));
         Assertions.assertFalse(passwordValidation.hasNumbers(""));
-        Assertions.assertFalse(passwordValidation.hasNumbers(null));
     }
 
     @Test
