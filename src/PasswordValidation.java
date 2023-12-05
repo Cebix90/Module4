@@ -18,6 +18,10 @@ public class PasswordValidation {
     }
 
     public boolean hasNumbers(String password){
+        if(password == null){
+            return false;
+        }
+
         return password.matches(".*\\d.*");
     }
 }
