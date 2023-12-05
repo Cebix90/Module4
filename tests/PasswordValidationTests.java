@@ -52,4 +52,8 @@ public class PasswordValidationTests {
         Assertions.assertFalse(passwordValidation.hasNumbers(""));
         Assertions.assertFalse(passwordValidation.hasNumbers(null));
     }
+
+    public void testHasSpecialCharacter(){
+        Assertions.assertTrue(passwordValidation.hasSpecialCharacter("Topsecretkey123!"));
+    }
 }
