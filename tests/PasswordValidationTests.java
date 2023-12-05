@@ -40,4 +40,12 @@ public class PasswordValidationTests {
 
         Assertions.assertTrue(noRepetitionsResult);
     }
+
+    @Test
+    public void testHasNumbers(){
+        String password = "Topsecretkey123!";
+        boolean hasNumbersResult = passwordValidation.hasNumbers(password);
+
+        Assertions.assertTrue(hasNumbersResult);
+    }
 }
