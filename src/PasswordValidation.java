@@ -16,4 +16,8 @@ public class PasswordValidation {
 
         return true;
     }
+
+    public boolean hasNumbers(String password){
+        return password.matches(".*\\d.*");
+    }
 }
