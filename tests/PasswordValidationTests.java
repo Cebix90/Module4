@@ -32,4 +32,12 @@ public class PasswordValidationTests {
 
         Assertions.assertTrue(noWhiteSpacesResult);
     }
+
+    @Test
+    public void testHasNoRepetitions(){
+        String password = "Topsecretkey123!";
+        boolean noRepetitionsResult = passwordValidation.hasNoRepetitions(password);
+
+        Assertions.assertTrue(noRepetitionsResult);
+    }
 }
