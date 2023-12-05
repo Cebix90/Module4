@@ -18,14 +18,14 @@ public class PasswordValidation {
     }
 
     public boolean hasNumbers(String password){
-        if(password == null){
-            return false;
-        }
-
         return password.matches(".*\\d.*");
     }
 
     public boolean hasSpecialCharacter(String password){
         return password.matches(".*\\p{Punct}.*");
+    }
+
+    public boolean isNotNull(String password) {
+        return password != null;
     }
 }
