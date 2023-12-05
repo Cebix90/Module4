@@ -42,10 +42,14 @@ public class PasswordValidationTests {
     }
 
     @Test
-    public void testHasNumbers(){
-        String password = "Topsecretkey123!";
-        boolean hasNumbersResult = passwordValidation.hasNumbers(password);
+    public void testHasNumbersWithNumbers(){
+        Assertions.assertTrue(passwordValidation.hasNumbers("Topsecretkey123!"));
+    }
 
-        Assertions.assertTrue(hasNumbersResult);
+    @Test
+    public void testHasNumbersWithoutNumbers() {
+        Assertions.assertFalse(passwordValidation.hasNumbers("NoNumbersHere"));
+        Assertions.assertFalse(passwordValidation.hasNumbers(""));
+        Assertions.assertFalse(passwordValidation.hasNumbers(null));
     }
 }
