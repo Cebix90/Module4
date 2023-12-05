@@ -24,4 +24,8 @@ public class PasswordValidation {
 
         return password.matches(".*\\d.*");
     }
+
+    public boolean hasSpecialCharacter(String password){
+        return password.matches(".*\\p{Punct}.*");
+    }
 }
