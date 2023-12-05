@@ -57,4 +57,9 @@ public class PasswordValidationTests {
     public void testHasSpecialCharacter(){
         Assertions.assertTrue(passwordValidation.hasSpecialCharacter("Topsecretkey123!"));
     }
+
+    @Test
+    public void testIsNotNull(){
+        Assertions.assertFalse(passwordValidation.isNotNull(null));
+    }
 }
