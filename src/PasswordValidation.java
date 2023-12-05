@@ -1,5 +1,5 @@
 public class PasswordValidation {
     public boolean hasGoodLength(String password){
-        return false;
+        return password.length() >= 12;
     }
 }
